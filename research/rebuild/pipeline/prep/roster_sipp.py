@@ -20,6 +20,8 @@ from prep import tax_units as T
 S = common.SETTINGS['sipp']
 LH = [tuple(r) for r in S['lh_industries']]    # the Census industry code ranges of leisure and hospitality
 WAGE_CLASSES = [1, 2, 3, 4, 5, 6]              # classes of worker that work for an employer (7 and 8 are self-employed)
+SELF_CLASSES = [7, 8]                          # self-employed: in an incorporated business (7), not incorporated (8)
+TIP_ITEMS = ['tips_se', 'tips_se_capped', 'ttoc_job', 'ttoc_job_precise', 'tips_ttoc_wage', 'tips_ttoc_se_capped']
 BLOOD = [7, 8, 9, 10, 13, 14]                  # the householder's relatives by blood (in-laws, codes 11 and 12, are not)
 RELATIVES = [3, 5, 7, 8, 9, 10, 11, 12, 13, 14]
 SHARED_ITEMS = ['dividends', 'gross_ss', 'pensions']   # the items the units file shares with the PUF (shared_items)
@@ -104,13 +106,78 @@ def shared_items(d, year):
     return y
 
 
+def tipped_occupations(year):
+    """The Census occupation codes of the tipped occupations (Treasury Tipped Occupation Codes, 26 CFR 1.224-1(h)) in
+    the code list the year's release uses (settings sipp.census_occ_vintage), as {code: precise}. precise is True
+    where everyone in the Census code is in a tipped occupation and False where the code also holds other workers
+    (resources_build/build_ttoc_census_occ.py)."""
+    v = int(S['census_occ_vintage'][str(year)])
+    t = pd.read_csv(os.path.join(common.RESOURCES, 'tips', 'ttoc_census_occ.csv'), dtype=str)
+    t = t[t.census_vintage == str(v)].drop_duplicates('census_occ')
+    return dict(zip(t.census_occ, t.census_occ_quality == 'precise'))
+
+
+def tip_items(d, year):
+    """Per person (SSUID, PNUM), the year's tips by kind of job and the person's tipped occupations:
+
+    - tips_se: tips on self-employment jobs (classes of worker 7 and 8), job lines 1-4.
+    - tips_se_capped: the same, with each business's tips held to that business's earnings for the year (its
+      TJBn_MSUM summed over the months, at least 0), as 26 CFR 1.224-1(e) holds a self-employed person's qualified
+      tips to the business's net income. A business is a person's job line with a self-employment class.
+    - ttoc_job: 1 if the person held any job, for an employer or self-employed, in a Census occupation code that
+      holds a tipped occupation; ttoc_job_precise: the same, counting only the codes that hold tipped occupations
+      alone (tipped_occupations).
+    - tips_ttoc_wage and tips_ttoc_se_capped: the tips on jobs for an employer, and the held self-employment tips,
+      from jobs in those occupation codes."""
+    occ = tipped_occupations(year)
+    key = ['SSUID', 'PNUM']
+    parts = []
+    for j in range(1, R.JOBS + 1):
+        cls = d[f'EJB{j}_CLWRK']
+        held = cls.notna().to_numpy()
+        tips = d[f'TJB{j}_TXAMT'].fillna(0).to_numpy(float) if j <= R.TIP_JOBS else np.zeros(len(d))
+        assert (tips[~held] == 0).all(), f'tips on job line {j} in months with no class of worker'
+        code = d[f'TJB{j}_OCC'].str.strip().str.zfill(4)
+        parts.append(pd.DataFrame({
+            'SSUID': d.SSUID.to_numpy()[held], 'PNUM': d.PNUM.to_numpy()[held], 'job': j,
+            'emp': cls.isin(WAGE_CLASSES).to_numpy()[held], 'se': cls.isin(SELF_CLASSES).to_numpy()[held],
+            'earn': d[f'TJB{j}_MSUM'].fillna(0).to_numpy(float)[held], 'tips': tips[held],
+            'no_occ': code.isna().to_numpy()[held],
+            'ttoc': code.isin(list(occ)).to_numpy()[held],
+            'precise': code.map(occ).fillna(False).astype(bool).to_numpy()[held]}))
+    a = pd.concat(parts, ignore_index=True)
+    assert (a.emp | a.se).all(), f'job-months with a class of worker outside 1-8: {int((~(a.emp | a.se)).sum())}'
+    common.say(f'SIPP {year}: job-months held {len(a):,}, with no occupation code {int(a.no_occ.sum()):,} '
+               f'(read as not a tipped occupation); in a tipped occupation code {int(a.ttoc.sum()):,}')
+    # 1. Each business's year: its tips and earnings, and whether it is in a tipped occupation in any month.
+    b = a[a.se].groupby(key + ['job'], sort=False).agg(tips=('tips', 'sum'), earn=('earn', 'sum'),
+                                                       ttoc=('ttoc', 'any'))
+    b['capped'] = np.minimum(b.tips, b.earn.clip(lower=0))
+    held_down = (b.capped < b.tips - 0.5)
+    common.say(f'  businesses with tips {int((b.tips > 0).sum())}, of which tips held to the business\'s earnings '
+               f'{int(held_down.sum())} (${(b.tips - b.capped).sum():,.0f} unweighted)')
+    se = b.groupby(level=key, sort=False).agg(tips_se=('tips', 'sum'), tips_se_capped=('capped', 'sum'))
+    se['tips_ttoc_se_capped'] = (b.capped * b.ttoc).groupby(level=key, sort=False).sum()
+    # 2. The person's tipped occupations and tips from jobs for an employer in them.
+    p = a.assign(tw=a.tips * (a.emp & a.ttoc)).groupby(key, sort=False).agg(
+        ttoc_job=('ttoc', 'any'), ttoc_job_precise=('precise', 'any'), tips_ttoc_wage=('tw', 'sum'))
+    out = p.join(se, how='outer')
+    for c in ['ttoc_job', 'ttoc_job_precise']:
+        out[c] = out[c].fillna(False).astype(int)
+    return out.fillna(0.0)
+
+
 def person_year(d, year):
     """Per person (SSUID, PNUM), the year's income items, December enrolment, earnings and weight, and the wages and
     tips on jobs for an employer.
 
     A job's earnings include the job's tips, so tips are part of wages, as on Form W-2. Tips in leisure and
     hospitality are those from jobs in the industries in settings sipp.lh_industries. Also returns the number of
-    job-months whose tips are above the job's earnings."""
+    job-months whose tips are above the job's earnings.
+
+    The tips columns (tips, tips_lh_dollars) are tips on jobs for an employer only, as the model uses them. The
+    columns from tip_items() add self-employment tips and the tipped occupations of 26 CFR 1.224-1(h); they are
+    carried to the files but not used by the model."""
     # 1. Wages and tips on jobs for an employer, by person-month. Tips are published for the first four job lines.
     wages = np.zeros(len(d)); tips = np.zeros(len(d)); tips_lh = np.zeros(len(d))
     over = 0
@@ -130,6 +197,10 @@ def person_year(d, year):
                       'uc': f('TUC1AMT') + f('TUC2AMT'), 'property': f('TPPRPINC'), 'other': f('TPOTHINC')})
     y = x.groupby(['SSUID', 'PNUM'], sort=False).sum()
     y['selfemp'] = y.earn - y.wage
+    y = y.join(tip_items(d, year))
+    y[TIP_ITEMS] = y[TIP_ITEMS].fillna(0)            # people who held no job in the year have none
+    for c in ['ttoc_job', 'ttoc_job_precise']:
+        y[c] = y[c].astype(int)
     y = y.join(shared_items(d, year))
     assert np.abs(y.own_gross_ss - y.ssb).max() < 0.005, 'gross Social Security differs from ssb'
     # 3. Elective deferrals, where the release asks them: a yearly amount repeated by month. A person with no value
@@ -318,6 +389,8 @@ def read_roster(year):
         r[c] = False
     # 10. Carry the tips through.
     r['tips'] = P.tips.to_numpy(); r['tips_lh_dollars'] = P.tips_lh_dollars.to_numpy()
+    for c in TIP_ITEMS:
+        r[c] = P[c].to_numpy()
     # 11. Elective deferrals, held to the year's legal limit (with the higher catch-up limit from age 50) and then to
     #     the person's own wages.
     asked = bool(P.elective_asked.all())
@@ -417,6 +490,8 @@ def unit_rows(units, persons, mfs, year):
         lh = g('tips_lh_dollars', 0.0).astype(float)
         out[f'tips{k}'] = tips
         out[f'tips_lh{k}'] = ((tips > 0) & (lh > S['lh_share'] * np.where(tips > 0, tips, 1))).astype(int)
+        for c in TIP_ITEMS:                       # not read by build_table.py (tip_items)
+            out[f'{c}{k}'] = g(c, 0).astype(int if c.startswith('ttoc') else float)
         out[f'elective{k}'] = g('elective', 0.0).astype(float)
         for c in SHARED_ITEMS:
             shared[c] = shared.get(c, 0.0) + g(f'own_{c}', 0.0).astype(float)

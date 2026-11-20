@@ -1580,6 +1580,8 @@
   "_lh_industries": "Leisure and hospitality: Census industry codes 8560-8690 (NAICS 71 and 72). The range starts at 8560 to cover the 2014 panel's older codes.",
   "lh_share": 0.5,
   "_lh_share": "A person's tips count as leisure and hospitality when more than this share of them comes from such jobs.",
+  "census_occ_vintage": {"2015": 2010, "2017": 2018, "2019": 2018, "2021": 2018, "2023": 2018},
+  "_census_occ_vintage": "The Census occupation code list of each year's TJBn_OCC: the 2014 panel uses the 2010 list (it has codes 4050 and 2340, which the 2018 list does not), and the annual releases from 2018 the 2018 list (codes 4055, 2350 and 9142, which the 2010 list does not). roster_sipp.py reads the tipped occupations of that list from resources/tips/ttoc_census_occ.csv.",
   "mfs_salt": 20261023,
   "_mfs_salt": "The salt of the keyed draw that splits joint couples into separate returns until they reach SOI Table 1.6's separate returns."
  },

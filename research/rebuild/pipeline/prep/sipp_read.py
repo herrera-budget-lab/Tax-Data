@@ -22,9 +22,10 @@ PERSON = ['SSUID', 'PNUM', 'MONTHCODE', 'ERESIDENCEID', 'THHLDSTATUS', 'SPANEL',
           'EPAR1TYP', 'EPAR2TYP', 'EDEPCLM', 'EFSTATUS', 'WPFINWGT', 'RENROLL', 'EEDGRADE', 'RDIS', 'RFAMNUM',
           'RFAMREF']
 INCOME = ['TPEARN', 'TSSSAMT', 'TSSI_AMT', 'TUC1AMT', 'TUC2AMT', 'TPPRPINC', 'TPOTHINC', 'TPTOTINC']
-JOBS = 7            # job lines 1-7: earnings (MSUM), industry (IND) and class of worker (CLWRK)
+JOBS = 7            # job lines 1-7: earnings (MSUM), industry (IND), occupation (OCC) and class of worker (CLWRK)
 TIP_JOBS = 4        # tips (TXAMT) are published for job lines 1-4 only
 JOB_COLS = [f'TJB{j}_MSUM' for j in range(1, JOBS + 1)] + [f'TJB{j}_IND' for j in range(1, JOBS + 1)] + \
+    [f'TJB{j}_OCC' for j in range(1, JOBS + 1)] + \
     [f'EJB{j}_CLWRK' for j in range(1, JOBS + 1)] + [f'TJB{j}_TXAMT' for j in range(1, TIP_JOBS + 1)]
 RET_ITEMS = 8       # retirement income items 1-8 (company or union, federal, state, local, military, railroad, reserve, other)
 OWNERSHIP = ['EOWN_ST', 'EOWN_MF', 'EJSOWNST', 'EJSOWNMF', 'EJOOWNST', 'EJOOWNMF']
@@ -35,7 +36,8 @@ SHARED = ['TINC_STMF'] + [f'TRET{k}AMT' for k in range(1, RET_ITEMS + 1)] + \
     ['ESSSMNYN'] + [f'ERET{k}MNYN' for k in range(1, RET_ITEMS + 1)] + OWNERSHIP
 COLUMNS = PERSON + INCOME + JOB_COLS + SHARED
 OPTIONAL = [common.SETTINGS['deferrals']['sipp_item']]   # elective deferrals; read only where the release has them
-STRINGS = ['SSUID', 'ERESIDENCEID'] + [f'TJB{j}_IND' for j in range(1, JOBS + 1)]
+STRINGS = ['SSUID', 'ERESIDENCEID'] + [f'TJB{j}_IND' for j in range(1, JOBS + 1)] + \
+    [f'TJB{j}_OCC' for j in range(1, JOBS + 1)]
 
 
 def release_path(year):

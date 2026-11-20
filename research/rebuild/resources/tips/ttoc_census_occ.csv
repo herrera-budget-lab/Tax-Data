@@ -1,0 +1,175 @@
+census_vintage,census_occ,census_title,census_soc,ttoc,ttoc_title,ttoc_category,soc_2018,soc_matched,match,ttoc_narrower_than_soc,census_occ_quality
+2010,0725,"Meeting, convention, and event planners",13-1121,502,Private Event Planners,Personal Services,13-1121,13-1121,exact,1,broad
+2010,2040,Clergy,21-2011,505,Event Officiants,Personal Services,21-2011,21-2011,exact,1,broad
+2010,2340,Other teachers and instructors,25-3000,507,Tutors,Personal Services,25-3041,25-3099,broad,0,broad
+2010,2340,Other teachers and instructors,25-3000,702,Self-Enrichment Teachers,Recreation and Instruction,25-3021,25-3021,broad,0,broad
+2010,2340,Other teachers and instructors,25-3000,706,Sports and Recreation Instructors,Recreation and Instruction,25-3021,25-3021,broad,0,broad
+2010,2600,Artists and related workers,27-1010,509,Visual Artists,Personal Services,27-1013,27-1013,broad,0,broad
+2010,2600,Artists and related workers,27-1010,609,Tattoo Artists and Piercers,Personal Appearance and Wellness,27-1019,27-1019,broad,0,broad
+2010,2630,Designers,27-1020,510,Floral Designers,Personal Services,27-1023,27-1023,broad,0,broad
+2010,2740,Dancers and choreographers,27-2030,205,Dancers,Entertainment and Events,27-2031,27-2031,broad,0,broad
+2010,2750,"Musicians, singers, and related workers",27-2040,206,Musicians and Singers,Entertainment and Events,27-2042,27-2042,broad,0,broad
+2010,2750,"Musicians, singers, and related workers",27-2040,207,"Disc Jockeys, Except Radio",Entertainment and Events,27-2091,27-2040,broad,0,broad
+2010,2760,"Entertainers and performers, sports and related workers, all other",27-2099,208,Entertainers and Performers,Entertainment and Events,27-2099,27-2099,exact,0,precise
+2010,2760,"Entertainers and performers, sports and related workers, all other",27-2099,209,Digital Content Creators,Entertainment and Events,27-2099,27-2099,exact,0,precise
+2010,2910,Photographers,27-4021,503,Private Event and Portrait Photographers,Personal Services,27-4021,27-4021,exact,1,broad
+2010,2920,"Television, video, and motion picture camera operators and editors",27-4030,504,Private Event Videographers,Personal Services,27-4031,27-4031,broad,1,broad
+2010,3630,Massage therapists,31-9011,602,Massage Therapists,Personal Appearance and Wellness,31-9011,31-9011,exact,0,precise
+2010,4000,Chefs and head cooks,35-1011,105,Chefs and Cooks,Beverage and Food Service,35-1011,35-1011,exact,0,precise
+2010,4010,First-line supervisors of food preparation and serving workers,35-1012,106,Food Preparation Workers,Beverage and Food Service,35-1012,35-1012,exact,0,precise
+2010,4020,Cooks,35-2010,105,Chefs and Cooks,Beverage and Food Service,35-2011,35-2011,broad,0,broad
+2010,4020,Cooks,35-2010,105,Chefs and Cooks,Beverage and Food Service,35-2013,35-2013,broad,0,broad
+2010,4020,Cooks,35-2010,105,Chefs and Cooks,Beverage and Food Service,35-2014,35-2014,broad,0,broad
+2010,4020,Cooks,35-2010,105,Chefs and Cooks,Beverage and Food Service,35-2019,35-2019,broad,0,broad
+2010,4030,Food preparation workers,35-2021,106,Food Preparation Workers,Beverage and Food Service,35-2021,35-2021,exact,0,precise
+2010,4040,Bartenders,35-3011,101,Bartenders,Beverage and Food Service,35-3011,35-3011,exact,0,precise
+2010,4050,"Combined food preparation and serving workers, including fast food",35-3021,107,Fast Food and Counter Workers,Beverage and Food Service,35-3023,35-3021,exact,0,precise
+2010,4060,"Counter attendants, cafeteria, food concession, and coffee shop",35-3022,107,Fast Food and Counter Workers,Beverage and Food Service,35-3023,35-3022,exact,0,precise
+2010,4110,Waiters and waitresses,35-3031,102,Wait Staff,Beverage and Food Service,35-3031,35-3031,exact,0,precise
+2010,4120,"Food servers, nonrestaurant",35-3041,103,"Food or Beverage Servers, Non-restaurant",Beverage and Food Service,35-3041,35-3041,exact,0,precise
+2010,4130,Dining room and cafeteria attendants and bartender helpers,35-9011,104,Dining Room and Cafeteria Attendants and Bartender Helpers,Beverage and Food Service,35-9011,35-9011,exact,0,precise
+2010,4140,Dishwashers,35-9021,108,Dishwashers,Beverage and Food Service,35-9021,35-9021,exact,0,precise
+2010,4150,"Hosts and hostesses, restaurant, lounge, and coffee shop",35-9031,109,"Host Staff, Restaurant, Lounge, and Coffee Shop",Beverage and Food Service,35-9031,35-9031,exact,0,precise
+2010,4160,"Food preparation and serving related workers, all other",35-9099,106,Food Preparation Workers,Beverage and Food Service,35-9099,35-9099,exact,0,precise
+2010,4230,Maids and housekeeping cleaners,37-2012,304,Maids and Housekeeping Cleaners,Hospitality and Guest Services,37-2012,37-2012,exact,0,precise
+2010,4230,Maids and housekeeping cleaners,37-2012,407,Home Cleaning Service Workers,Home Services,37-2012,37-2012,exact,1,precise
+2010,4250,Grounds maintenance workers,37-3010,402,Home Landscaping and Groundskeeping Workers,Home Services,37-3011,37-3011,broad,1,broad
+2010,4300,First-line supervisors of gaming workers,39-1010,201,Gambling Dealers,Entertainment and Events,39-1013,39-1011,broad,0,broad
+2010,4300,First-line supervisors of gaming workers,39-1010,201,Gambling Dealers,Entertainment and Events,39-1013,39-1012,broad,0,broad
+2010,4350,Nonfarm animal caretakers,39-2021,506,Pet and Show Animal Caretakers,Personal Services,39-2021,39-2021,exact,0,precise
+2010,4400,Gaming services workers,39-3010,201,Gambling Dealers,Entertainment and Events,39-3011,39-3011,broad,0,broad
+2010,4400,Gaming services workers,39-3010,204,Gambling and Sports Book Writers and Runners,Entertainment and Events,39-3012,39-3012,broad,0,broad
+2010,4420,"Ushers, lobby attendants, and ticket takers",39-3031,210,"Ushers, Lobby Attendants, and Ticket Takers",Entertainment and Events,39-3031,39-3031,exact,0,precise
+2010,4430,Miscellaneous entertainment attendants and related workers,39-3090,211,"Locker Room, Coatroom, and Dressing Room Attendants",Entertainment and Events,39-3093,39-3093,broad,0,broad
+2010,4430,Miscellaneous entertainment attendants and related workers,39-3090,701,Golf Caddies,Recreation and Instruction,39-3091,39-3091,broad,0,broad
+2010,4500,Barbers,39-5011,603,"Barbers, Hairdressers, Hairstylists, and Cosmetologists",Personal Appearance and Wellness,39-5011,39-5011,exact,0,precise
+2010,4510,"Hairdressers, hairstylists, and cosmetologists",39-5012,603,"Barbers, Hairdressers, Hairstylists, and Cosmetologists",Personal Appearance and Wellness,39-5012,39-5012,exact,0,precise
+2010,4510,"Hairdressers, hairstylists, and cosmetologists",39-5012,606,Eyebrow and Eyelash Technicians,Personal Appearance and Wellness,39-5012,39-5012,exact,0,precise
+2010,4520,Miscellaneous personal appearance workers,39-5090,601,Skincare Specialists,Personal Appearance and Wellness,39-5094,39-5094,broad,0,broad
+2010,4520,Miscellaneous personal appearance workers,39-5090,604,Shampooers,Personal Appearance and Wellness,39-5093,39-5093,broad,0,broad
+2010,4520,Miscellaneous personal appearance workers,39-5090,605,Manicurists and Pedicurists,Personal Appearance and Wellness,39-5092,39-5092,broad,0,broad
+2010,4520,Miscellaneous personal appearance workers,39-5090,607,Makeup Artists,Personal Appearance and Wellness,39-5091,39-5091,broad,0,broad
+2010,4530,"Baggage porters, bellhops, and concierges",39-6010,301,Baggage Porters and Bellhops,Hospitality and Guest Services,39-6011,39-6011,broad,0,broad
+2010,4530,"Baggage porters, bellhops, and concierges",39-6010,302,Concierges,Hospitality and Guest Services,39-6012,39-6012,broad,0,broad
+2010,4540,Tour and travel guides,39-7010,704,Tour Guides,Recreation and Instruction,39-7011,39-7011,broad,0,broad
+2010,4540,Tour and travel guides,39-7010,705,Travel Guides,Recreation and Instruction,39-7012,39-7012,broad,0,broad
+2010,4600,Childcare workers,39-9011,508,Nannies and Babysitters,Personal Services,39-9011,39-9011,exact,0,precise
+2010,4610,Personal care aides,39-9021,501,Personal Care and Service Workers,Personal Services,31-1122,39-9021,exact,0,precise
+2010,4620,Recreation and fitness workers,39-9030,608,Exercise Trainers and Group Fitness Instructors,Personal Appearance and Wellness,39-9031,39-9031,broad,0,broad
+2010,4650,"Personal care and service workers, all other",39-9099,501,Personal Care and Service Workers,Personal Services,39-9099,39-9099,exact,0,precise
+2010,4720,Cashiers,41-2010,202,Gambling Change Persons and Booth Cashiers,Entertainment and Events,41-2012,41-2012,broad,0,broad
+2010,5130,Gaming cage workers,43-3041,203,Gambling Cage Workers,Entertainment and Events,43-3041,43-3041,exact,0,precise
+2010,5300,"Hotel, motel, and resort desk clerks",43-4081,303,"Hotel, Motel, and Resort Desk Clerks",Hospitality and Guest Services,43-4081,43-4081,exact,0,precise
+2010,6355,Electricians,47-2111,403,Home Electricians,Home Services,47-2111,47-2111,exact,1,broad
+2010,6440,"Pipelayers, plumbers, pipefitters, and steamfitters",47-2150,404,Home Plumbers,Home Services,47-2152,47-2152,broad,1,broad
+2010,7120,Electronic home entertainment equipment installers and repairers,49-2097,401,Home Maintenance and Repair Workers,Home Services,49-2097,49-2097,exact,1,broad
+2010,7200,Automotive service technicians and mechanics,49-3023,409,Roadside Assistance Workers,Home Services,49-3023,49-3023,exact,1,broad
+2010,7315,"Heating, air conditioning, and refrigeration mechanics and installers",49-9021,405,Home Heating and Air Conditioning Mechanics and Installers,Home Services,49-9021,49-9021,exact,1,broad
+2010,7320,Home appliance repairers,49-9031,406,Home Appliance Installers and Repairers,Home Services,49-9031,49-9031,exact,1,broad
+2010,7340,"Maintenance and repair workers, general",49-9071,401,Home Maintenance and Repair Workers,Home Services,49-9071,49-9071,exact,1,broad
+2010,7430,Precision instrument and equipment repairers,49-9060,401,Home Maintenance and Repair Workers,Home Services,49-9063,49-9063,broad,1,broad
+2010,7540,Locksmiths and safe repairers,49-9094,408,Locksmiths,Home Services,49-9094,49-9094,exact,0,precise
+2010,7610,"Helpers--installation, maintenance, and repair workers",49-9098,401,Home Maintenance and Repair Workers,Home Services,49-9098,49-9098,exact,1,broad
+2010,7630,"Other installation, maintenance, and repair workers",49-909X,401,Home Maintenance and Repair Workers,Home Services,49-9099,49-9099,broad,1,broad
+2010,7800,Bakers,51-3011,110,Bakers,Beverage and Food Service,51-3011,51-3011,exact,0,precise
+2010,8330,Shoe and leather workers and repairers,51-6041,611,Shoe and Leather Workers and Repairers,Personal Appearance and Wellness,51-6041,51-6041,exact,0,precise
+2010,8350,"Tailors, dressmakers, and sewers",51-6050,610,Tailors,Personal Appearance and Wellness,51-6052,51-6052,broad,0,broad
+2010,8510,Furniture finishers,51-7021,401,Home Maintenance and Repair Workers,Home Services,51-7021,51-7021,exact,1,broad
+2010,9030,Aircraft pilots and flight engineers,53-2010,703,Recreational and Tour Pilots,Recreation and Instruction,53-2012,53-2012,broad,1,broad
+2010,9120,Bus drivers,53-3020,806,Private and Charter Bus Drivers,Transportation and Delivery,53-3052,53-3021,broad,1,broad
+2010,9130,Driver/sales workers and truck drivers,53-3030,409,Roadside Assistance Workers,Home Services,53-3032,53-3032,broad,1,broad
+2010,9130,Driver/sales workers and truck drivers,53-3030,804,Goods Delivery People,Transportation and Delivery,53-3031,53-3031,broad,0,broad
+2010,9140,Taxi drivers and chauffeurs,53-3041,802,Taxi and Rideshare Drivers and Chauffeurs,Transportation and Delivery,53-3054,53-3041,exact,0,precise
+2010,9140,Taxi drivers and chauffeurs,53-3041,803,Shuttle Drivers,Transportation and Delivery,53-3053,53-3041,exact,0,precise
+2010,9310,Ship and boat captains and operators,53-5020,807,Water Taxi Operators and Charter Boat Workers,Transportation and Delivery,53-5022,53-5022,broad,1,broad
+2010,9350,Parking lot attendants,53-6021,801,Parking and Valet Attendants,Transportation and Delivery,53-6021,53-6021,exact,0,precise
+2010,9360,Automotive and watercraft service attendants,53-6031,810,Gas Pump Attendant,Transportation and Delivery,53-6031,53-6031,exact,0,precise
+2010,9420,Other transportation workers,53-60XX,808,"Rickshaw, Pedicab, and Carriage Drivers",Transportation and Delivery,53-6099,53-6099,broad,0,broad
+2010,9610,Cleaners of vehicles and equipment,53-7061,805,Personal Vehicle and Equipment Cleaners,Transportation and Delivery,53-7061,53-7061,exact,0,precise
+2010,9620,"Laborers and freight, stock, and material movers, hand",53-7062,809,Home Movers,Transportation and Delivery,53-7062,53-7062,exact,1,broad
+2018,0725,"Meeting, convention, and event planners",13-1121,502,Private Event Planners,Personal Services,13-1121,13-1121,exact,1,broad
+2018,2040,Clergy,21-2011,505,Event Officiants,Personal Services,21-2011,21-2011,exact,1,broad
+2018,2350,Tutors,25-3041,507,Tutors,Personal Services,25-3041,25-3041,exact,0,precise
+2018,2360,Other teachers and instructors,25-30XX,702,Self-Enrichment Teachers,Recreation and Instruction,25-3021,25-3021,broad,0,broad
+2018,2360,Other teachers and instructors,25-30XX,706,Sports and Recreation Instructors,Recreation and Instruction,25-3021,25-3021,broad,0,broad
+2018,2600,Artists and related workers,27-1010,509,Visual Artists,Personal Services,27-1013,27-1013,broad,0,broad
+2018,2600,Artists and related workers,27-1010,609,Tattoo Artists and Piercers,Personal Appearance and Wellness,27-1019,27-1019,broad,0,broad
+2018,2633,Floral designers,27-1023,510,Floral Designers,Personal Services,27-1023,27-1023,exact,0,precise
+2018,2740,Dancers and choreographers,27-2030,205,Dancers,Entertainment and Events,27-2031,27-2031,broad,0,broad
+2018,2752,Musicians and singers,27-2042,206,Musicians and Singers,Entertainment and Events,27-2042,27-2042,exact,0,precise
+2018,2755,"Disc jockeys, except radio",27-2091,207,"Disc Jockeys, Except Radio",Entertainment and Events,27-2091,27-2091,exact,0,precise
+2018,2770,"Entertainers and performers, sports and related workers, all other",27-2099,208,Entertainers and Performers,Entertainment and Events,27-2099,27-2099,exact,0,precise
+2018,2770,"Entertainers and performers, sports and related workers, all other",27-2099,209,Digital Content Creators,Entertainment and Events,27-2099,27-2099,exact,0,precise
+2018,2910,Photographers,27-4021,503,Private Event and Portrait Photographers,Personal Services,27-4021,27-4021,exact,1,broad
+2018,2920,"Television, video, and film camera operators and editors",27-4030,504,Private Event Videographers,Personal Services,27-4031,27-4031,broad,1,broad
+2018,3602,Personal care aides,31-1122,501,Personal Care and Service Workers,Personal Services,31-1122,31-1122,exact,0,precise
+2018,3630,Massage therapists,31-9011,602,Massage Therapists,Personal Appearance and Wellness,31-9011,31-9011,exact,0,precise
+2018,4000,Chefs and head cooks,35-1011,105,Chefs and Cooks,Beverage and Food Service,35-1011,35-1011,exact,0,precise
+2018,4010,First-line supervisors of food preparation and serving workers,35-1012,106,Food Preparation Workers,Beverage and Food Service,35-1012,35-1012,exact,0,precise
+2018,4020,Cooks,35-2010,105,Chefs and Cooks,Beverage and Food Service,35-2011,35-2011,broad,0,broad
+2018,4020,Cooks,35-2010,105,Chefs and Cooks,Beverage and Food Service,35-2013,35-2013,broad,0,broad
+2018,4020,Cooks,35-2010,105,Chefs and Cooks,Beverage and Food Service,35-2014,35-2014,broad,0,broad
+2018,4020,Cooks,35-2010,105,Chefs and Cooks,Beverage and Food Service,35-2019,35-2019,broad,0,broad
+2018,4030,Food preparation workers,35-2021,106,Food Preparation Workers,Beverage and Food Service,35-2021,35-2021,exact,0,precise
+2018,4040,Bartenders,35-3011,101,Bartenders,Beverage and Food Service,35-3011,35-3011,exact,0,precise
+2018,4055,Fast food and counter workers,35-3023,107,Fast Food and Counter Workers,Beverage and Food Service,35-3023,35-3023,exact,0,precise
+2018,4110,Waiters and waitresses,35-3031,102,Wait Staff,Beverage and Food Service,35-3031,35-3031,exact,0,precise
+2018,4120,"Food servers, nonrestaurant",35-3041,103,"Food or Beverage Servers, Non-restaurant",Beverage and Food Service,35-3041,35-3041,exact,0,precise
+2018,4130,Dining room and cafeteria attendants and bartender helpers,35-9011,104,Dining Room and Cafeteria Attendants and Bartender Helpers,Beverage and Food Service,35-9011,35-9011,exact,0,precise
+2018,4140,Dishwashers,35-9021,108,Dishwashers,Beverage and Food Service,35-9021,35-9021,exact,0,precise
+2018,4150,"Hosts and hostesses, restaurant, lounge, and coffee shop",35-9031,109,"Host Staff, Restaurant, Lounge, and Coffee Shop",Beverage and Food Service,35-9031,35-9031,exact,0,precise
+2018,4160,"Food preparation and serving related workers, all other",35-9099,106,Food Preparation Workers,Beverage and Food Service,35-9099,35-9099,exact,0,precise
+2018,4230,Maids and housekeeping cleaners,37-2012,304,Maids and Housekeeping Cleaners,Hospitality and Guest Services,37-2012,37-2012,exact,0,precise
+2018,4230,Maids and housekeeping cleaners,37-2012,407,Home Cleaning Service Workers,Home Services,37-2012,37-2012,exact,1,precise
+2018,4251,Landscaping and groundskeeping workers,37-3011,402,Home Landscaping and Groundskeeping Workers,Home Services,37-3011,37-3011,exact,1,broad
+2018,4330,Supervisors of personal care and service workers,39-1000,201,Gambling Dealers,Entertainment and Events,39-1013,39-1013,broad,0,broad
+2018,4350,Animal caretakers,39-2021,506,Pet and Show Animal Caretakers,Personal Services,39-2021,39-2021,exact,0,precise
+2018,4400,Gambling services workers,39-3010,201,Gambling Dealers,Entertainment and Events,39-3011,39-3011,broad,0,broad
+2018,4400,Gambling services workers,39-3010,204,Gambling and Sports Book Writers and Runners,Entertainment and Events,39-3012,39-3012,broad,0,broad
+2018,4420,"Ushers, lobby attendants, and ticket takers",39-3031,210,"Ushers, Lobby Attendants, and Ticket Takers",Entertainment and Events,39-3031,39-3031,exact,0,precise
+2018,4435,Other entertainment attendants and related workers,39-30XX,211,"Locker Room, Coatroom, and Dressing Room Attendants",Entertainment and Events,39-3093,39-3093,broad,0,broad
+2018,4435,Other entertainment attendants and related workers,39-30XX,701,Golf Caddies,Recreation and Instruction,39-3091,39-3091,broad,0,broad
+2018,4500,Barbers,39-5011,603,"Barbers, Hairdressers, Hairstylists, and Cosmetologists",Personal Appearance and Wellness,39-5011,39-5011,exact,0,precise
+2018,4510,"Hairdressers, hairstylists, and cosmetologists",39-5012,603,"Barbers, Hairdressers, Hairstylists, and Cosmetologists",Personal Appearance and Wellness,39-5012,39-5012,exact,0,precise
+2018,4510,"Hairdressers, hairstylists, and cosmetologists",39-5012,606,Eyebrow and Eyelash Technicians,Personal Appearance and Wellness,39-5012,39-5012,exact,0,precise
+2018,4521,Manicurists and pedicurists,39-5092,605,Manicurists and Pedicurists,Personal Appearance and Wellness,39-5092,39-5092,exact,0,precise
+2018,4522,Skincare specialists,39-5094,601,Skincare Specialists,Personal Appearance and Wellness,39-5094,39-5094,exact,0,precise
+2018,4525,Other personal appearance workers,39-509X,604,Shampooers,Personal Appearance and Wellness,39-5093,39-5093,broad,0,broad
+2018,4525,Other personal appearance workers,39-509X,607,Makeup Artists,Personal Appearance and Wellness,39-5091,39-5091,broad,0,broad
+2018,4530,"Baggage porters, bellhops, and concierges",39-6010,301,Baggage Porters and Bellhops,Hospitality and Guest Services,39-6011,39-6011,broad,0,broad
+2018,4530,"Baggage porters, bellhops, and concierges",39-6010,302,Concierges,Hospitality and Guest Services,39-6012,39-6012,broad,0,broad
+2018,4540,Tour and travel guides,39-7010,704,Tour Guides,Recreation and Instruction,39-7011,39-7011,broad,0,broad
+2018,4540,Tour and travel guides,39-7010,705,Travel Guides,Recreation and Instruction,39-7012,39-7012,broad,0,broad
+2018,4600,Childcare workers,39-9011,508,Nannies and Babysitters,Personal Services,39-9011,39-9011,exact,0,precise
+2018,4621,Exercise trainers and group fitness instructors,39-9031,608,Exercise Trainers and Group Fitness Instructors,Personal Appearance and Wellness,39-9031,39-9031,exact,0,precise
+2018,4655,"Personal care and service workers, all other",39-9099,501,Personal Care and Service Workers,Personal Services,39-9099,39-9099,exact,0,precise
+2018,4720,Cashiers,41-2010,202,Gambling Change Persons and Booth Cashiers,Entertainment and Events,41-2012,41-2012,broad,0,broad
+2018,5130,Gambling cage workers,43-3041,203,Gambling Cage Workers,Entertainment and Events,43-3041,43-3041,exact,0,precise
+2018,5300,"Hotel, motel, and resort desk clerks",43-4081,303,"Hotel, Motel, and Resort Desk Clerks",Hospitality and Guest Services,43-4081,43-4081,exact,0,precise
+2018,6355,Electricians,47-2111,403,Home Electricians,Home Services,47-2111,47-2111,exact,1,broad
+2018,6442,"Plumbers, pipefitters, and steamfitters",47-2152,404,Home Plumbers,Home Services,47-2152,47-2152,exact,1,broad
+2018,7120,Audiovisual equipment installers and repairers,49-2097,401,Home Maintenance and Repair Workers,Home Services,49-2097,49-2097,exact,1,broad
+2018,7200,Automotive service technicians and mechanics,49-3023,409,Roadside Assistance Workers,Home Services,49-3023,49-3023,exact,1,broad
+2018,7315,"Heating, air conditioning, and refrigeration mechanics and installers",49-9021,405,Home Heating and Air Conditioning Mechanics and Installers,Home Services,49-9021,49-9021,exact,1,broad
+2018,7320,Home appliance repairers,49-9031,406,Home Appliance Installers and Repairers,Home Services,49-9031,49-9031,exact,1,broad
+2018,7340,"Maintenance and repair workers, general",49-9071,401,Home Maintenance and Repair Workers,Home Services,49-9071,49-9071,exact,1,broad
+2018,7430,Precision instrument and equipment repairers,49-9060,401,Home Maintenance and Repair Workers,Home Services,49-9063,49-9063,broad,1,broad
+2018,7540,Locksmiths and safe repairers,49-9094,408,Locksmiths,Home Services,49-9094,49-9094,exact,0,precise
+2018,7610,"Helpers--installation, maintenance, and repair workers",49-9098,401,Home Maintenance and Repair Workers,Home Services,49-9098,49-9098,exact,1,broad
+2018,7640,"Other installation, maintenance, and repair workers",49-909X,401,Home Maintenance and Repair Workers,Home Services,49-9099,49-9099,broad,1,broad
+2018,7800,Bakers,51-3011,110,Bakers,Beverage and Food Service,51-3011,51-3011,exact,0,precise
+2018,8335,Shoe and leather workers,51-6040,611,Shoe and Leather Workers and Repairers,Personal Appearance and Wellness,51-6041,51-6041,broad,0,broad
+2018,8350,"Tailors, dressmakers, and sewers",51-6050,610,Tailors,Personal Appearance and Wellness,51-6052,51-6052,broad,0,broad
+2018,8510,Furniture finishers,51-7021,401,Home Maintenance and Repair Workers,Home Services,51-7021,51-7021,exact,1,broad
+2018,9030,Aircraft pilots and flight engineers,53-2010,703,Recreational and Tour Pilots,Recreation and Instruction,53-2012,53-2012,broad,1,broad
+2018,9122,"Bus drivers, transit and intercity",53-3052,806,Private and Charter Bus Drivers,Transportation and Delivery,53-3052,53-3052,exact,1,broad
+2018,9130,Driver/sales workers and truck drivers,53-3030,409,Roadside Assistance Workers,Home Services,53-3032,53-3032,broad,1,broad
+2018,9130,Driver/sales workers and truck drivers,53-3030,804,Goods Delivery People,Transportation and Delivery,53-3031,53-3031,broad,0,broad
+2018,9141,Shuttle drivers and chauffeurs,53-3053,803,Shuttle Drivers,Transportation and Delivery,53-3053,53-3053,exact,0,precise
+2018,9142,Taxi drivers,53-3054,802,Taxi and Rideshare Drivers and Chauffeurs,Transportation and Delivery,53-3054,53-3054,exact,0,precise
+2018,9310,Ship and boat captains and operators,53-5020,807,Water Taxi Operators and Charter Boat Workers,Transportation and Delivery,53-5022,53-5022,broad,1,broad
+2018,9350,Parking attendants,53-6021,801,Parking and Valet Attendants,Transportation and Delivery,53-6021,53-6021,exact,0,precise
+2018,9365,Transportation service attendants,53-6030,810,Gas Pump Attendant,Transportation and Delivery,53-6031,53-6031,broad,0,broad
+2018,9430,Other transportation workers,53-60XX,808,"Rickshaw, Pedicab, and Carriage Drivers",Transportation and Delivery,53-6099,53-6099,broad,0,broad
+2018,9610,Cleaners of vehicles and equipment,53-7061,805,Personal Vehicle and Equipment Cleaners,Transportation and Delivery,53-7061,53-7061,exact,0,precise
+2018,9620,"Laborers and freight, stock, and material movers, hand",53-7062,809,Home Movers,Transportation and Delivery,53-7062,53-7062,exact,1,broad
